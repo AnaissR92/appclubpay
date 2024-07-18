@@ -75,13 +75,13 @@
     @endcan
 
     <li>
-        <a href="javascript:void(0)">
+        <a href="{{ route('pos.index') }}">
             <i class="fas fa-tablet-alt font-size-18"></i>
             <span data-key="t-{{ __('system.fields.pos') }}">{{ __('system.fields.pos') }}</span>
         </a>
     </li>
     <li>
-        <a href="javascript:void(0)">
+        <a href="{{ route('delivery.index') }}">
             <i class="fas fa-cart-plus font-size-18"></i>
             <span data-key="t-{{ __('system.fields.delivery') }}">{{ __('system.fields.delivery') }}</span>
         </a>
