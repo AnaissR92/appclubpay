@@ -41,6 +41,13 @@ Route::middleware(['preventBackHistory'])->group(function () {
 
     Route::get('staff/plan', [App\Http\Controllers\Restaurant\VendorController::class, 'staffPlan']);
 
+
+    // POS
+    Route::get('/pos', [\App\Http\Controllers\POSController::class, 'index'])->name('frontend.pos');
+
+    // DELIVERY
+    Route::get('/delivery', [\App\Http\Controllers\DeliveryController::class, 'index'])->name('frontend.delivery');
+
     //store feedback
     Route::post('/feedback', [App\Http\Controllers\Restaurant\FeedbackController::class, 'store'])->name('feedbacks.store');
 
@@ -71,9 +78,9 @@ Route::middleware(['preventBackHistory'])->group(function () {
         Route::resource('plans', App\Http\Controllers\Restaurant\PlanController::class)->middleware('role:Super-Admin');
 
         Route::resource('vendors', App\Http\Controllers\Restaurant\VendorController::class)->middleware('role:Super-Admin');
-        Route::group(['prefix' => 'vendors', 'controller' => App\Http\Controllers\Restaurant\VendorController::class, 'middleware' => 'role:Super-Admin'],function(){
-            Route::get('{vendor}/payment-history','paymentTransactions')->name('vendors.paymentTransactions');
-            Route::get('{vendor}/subscription-history','subscriptionHistory')->name('vendors.subscriptionHistory');
+        Route::group(['prefix' => 'vendors', 'controller' => App\Http\Controllers\Restaurant\VendorController::class, 'middleware' => 'role:Super-Admin'], function () {
+            Route::get('{vendor}/payment-history', 'paymentTransactions')->name('vendors.paymentTransactions');
+            Route::get('{vendor}/subscription-history', 'subscriptionHistory')->name('vendors.subscriptionHistory');
         });
 
         Route::post('vendors/update-password/{vendor}', [App\Http\Controllers\Restaurant\VendorController::class, 'updatePassword'])->middleware('role:Super-Admin')->name('vendors.password.update');
