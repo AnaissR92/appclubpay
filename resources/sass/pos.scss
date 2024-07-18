@@ -1,0 +1,11 @@
+@tailwind components;
+@tailwind utilities;
+
+.card {
+  background-color: white;
+  max-width: 200px;
+}
+.card img {
+  max-width: 128px;
+  margin: auto;
+}

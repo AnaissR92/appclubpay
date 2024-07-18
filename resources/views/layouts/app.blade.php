@@ -38,6 +38,8 @@
     @if(isset($metaDatas['analytics_code']) && $metaDatas['analytics_code']!=null && $metaDatas['analytics_code']!="")
         {!! $metaDatas['analytics_code'] !!}
     @endif
+
+    @yield('styles') 
 </head>
 @php($theme = Cookie::get('resto_defult_theme', 'light'))
 <body data-sidebar="{{ $theme }}" data-layout-mode="{{ $theme }}" data-topbar="{{ $theme }}">
