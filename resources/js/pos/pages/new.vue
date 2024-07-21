@@ -12,7 +12,7 @@
       <div class="panel-top">
         <button>
           <i class="fas fa-plus"></i>
-          <span>Nuevo pedido</span>
+          <span>Boton</span>
         </button>
       </div>
       <div class="panel-list">
@@ -78,10 +78,12 @@
         </div>
         <div class="row py-2">
           <div class="col-6">
-            <button class="w-full">
-              <i class="fas fa-pen"></i>
-              <span>Editar pedido</span>
-            </button>
+            <a href="/pos">
+              <button class="w-full">
+                <i class="fas fa-pen"></i>
+                <span>Cancelar</span>
+              </button>
+            </a>
           </div>
           <div class="col-6">
             <button class="success w-full">

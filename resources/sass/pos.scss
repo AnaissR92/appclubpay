@@ -2,6 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --dp-border-radius: 0.5rem;
+  --dp-font-size: 0.8rem;
+}
+
+/* GLOBAL */
+.logo img {
+  max-width: 32px;
+}
+
+table thead tr {
+  background-color: #666;
+}
+table thead tr td {
+  color: white;
+}
+table tbody tr:nth-child(even) {
+  background-color: #f5f7fa;
+}
+table tbody tr:hover {
+  background-color: #f8fafd;
+}
+
 .card {
   background-color: white;
   max-width: 46%;

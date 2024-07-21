@@ -17,4 +17,10 @@ class POSController extends Controller
         // Lógica para la página de POS
         return view('pos.index');
     }
+
+    public function new()
+    {
+        // Lógica para la página de POS
+        return view('pos.new');
+    }
 }

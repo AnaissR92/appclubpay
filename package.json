@@ -6,6 +6,7 @@
     },
     "devDependencies": {
         "@popperjs/core": "^2.10.2",
+        "@tailwindcss/forms": "^0.5.7",
         "admin-lte": "^4.0.0-beta1",
         "autoprefixer": "^10.4.12",
         "axios": "^1.7.2",
@@ -24,10 +25,12 @@
     "dependencies": {
         "@tailwindcss/line-clamp": "^0.4.2",
         "@vitejs/plugin-vue": "^3.0.0",
+        "@vuepic/vue-datepicker": "^9.0.1",
         "alpinejs": "^3.10.3",
         "esbuild": "^0.15.10",
         "flowbite": "^1.5.3",
         "vue": "^3.4.32",
-        "vue-loader": "^17.4.2"
+        "vue-loader": "^17.4.2",
+        "vue-tailwind-datepicker": "^1.7.3"
     }
 }
