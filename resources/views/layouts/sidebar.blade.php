@@ -75,7 +75,7 @@
     @endcan
 
     <li>
-        <a href="{{ route('pos.index') }}">
+        <a href="{{ route('frontend.pos') }}">
             <i class="fas fa-tablet-alt font-size-18"></i>
             <span data-key="t-{{ __('system.fields.pos') }}">{{ __('system.fields.pos') }}</span>
         </a>

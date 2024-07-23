@@ -43,8 +43,8 @@ Route::middleware(['preventBackHistory'])->group(function () {
 
 
     // POS
-    Route::get('/pos', [\App\Http\Controllers\POSController::class, 'index'])->name('pos.index');
-    Route::get('/pos/new', [\App\Http\Controllers\POSController::class, 'new'])->name('pos.new');
+    Route::get('/pos', [\App\Http\Controllers\POSController::class, 'index'])->name('frontend.pos');
+    Route::get('/pos/new', [\App\Http\Controllers\POSController::class, 'new'])->name('frontned.pos.new');
 
     // DELIVERY
     Route::get('/delivery', [\App\Http\Controllers\DeliveryController::class, 'index'])->name('delivery.index');

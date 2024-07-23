@@ -1,17 +1,36 @@
 {
+  "public/front-images/temp/crujiente-carne-frita-verduras.png": {
+    "file": "assets/crujiente-carne-frita-verduras.bd69bcf7.png",
+    "src": "public/front-images/temp/crujiente-carne-frita-verduras.png"
+  },
   "resources/js/app.js": {
     "file": "assets/app.a90aeddc.js",
     "src": "resources/js/app.js",
     "isEntry": true
   },
   "resources/js/pos.js": {
-    "file": "assets/pos.f6bf80fe.js",
+    "file": "assets/pos.a3e6bee9.js",
     "src": "resources/js/pos.js",
-    "isEntry": true
+    "isEntry": true,
+    "css": [
+      "assets/pos.518644e1.css"
+    ],
+    "assets": [
+      "assets/crujiente-carne-frita-verduras.bd69bcf7.png"
+    ]
+  },
+  "resources/js/pos.css": {
+    "file": "assets/pos.518644e1.css",
+    "src": "resources/js/pos.css"
   },
   "resources/css/app.css": {
-    "file": "assets/app.1f2c6b7e.css",
+    "file": "assets/app.274174bf.css",
     "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/sass/pos.scss": {
+    "file": "assets/pos.29e17365.css",
+    "src": "resources/sass/pos.scss",
     "isEntry": true
   }
 }
