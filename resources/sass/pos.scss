@@ -15,6 +15,12 @@
 table thead tr {
   background-color: #666;
 }
+table thead tr th {
+  color: white;
+  font-weight: 400;
+  padding-left: 6px;
+  @apply py-1;
+}
 table thead tr td {
   color: white;
 }
@@ -25,23 +31,46 @@ table tbody tr:hover {
   background-color: #f8fafd;
 }
 
+/* CARD SECTION */
+.card-section {
+  background-color: white;
+  border-radius: 10px;
+}
+.card-section .card-section-title {
+  background-color: #e5f9fb;
+  padding: 0.5rem 1rem;
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  -moz-border-radius-topright: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.card-section .card-section-title h3 {
+  @apply text-lg font-bold;
+}
+.card-section-container {
+  padding: 16px;
+}
+
+/* CARD */
 .card {
   background-color: white;
-  max-width: 46%;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin: 2% 1%;
 }
 .card img {
-  max-width: 128px;
   margin: auto;
   transition: all 0.3s ease;
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  -moz-border-radius-topright: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 .card:hover {
   transform: translateY(-4px);
-}
-.card:hover img {
-  transform: scale(1.05);
 }
 
 .left-panel {
@@ -146,6 +175,21 @@ button.w-full {
   width: 100%;
 }
 
+/* FORMS */
+select,
+input {
+  border-radius: 6px;
+  border-color: #ddd;
+}
+
+.input-search {
+  padding-left: 32px;
+  background-image: url("/public/front-images/icons/search.png");
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: 6px center;
+}
+
 /* MEDIA QUERIES */
 @media (min-width: 600px) {
   .card {
@@ -160,33 +204,14 @@ button.w-full {
 }
 @media (min-width: 780px) {
   .card {
-    max-width: 29%;
-    margin: 2% 2%;
-  }
-  .left-panel {
-    max-width: 60%;
-  }
-  .right-panel {
-    width: 40%;
+    max-width: 20%;
   }
 }
 @media (min-width: 1080px) {
   .card {
-    max-width: 20%;
-    margin: 2% 2%;
-  }
-  .left-panel {
-    max-width: 70%;
-  }
-  .right-panel {
-    width: 30%;
+    max-width: 23%;
+    margin: 1%;
   }
 }
 @media (min-width: 1280px) {
-  .left-panel {
-    max-width: 70%;
-  }
-  .right-panel {
-    width: 30%;
-  }
 }
