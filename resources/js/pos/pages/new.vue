@@ -81,7 +81,11 @@
                 <tbody>
                   <tr>
                     <td class="py-1 px-1">
-                      <img src="/front-images/temp/tortilla.jpg" class="" width="32px" />
+                      <img
+                        src="/public/front-images/temp/tortilla.jpg"
+                        class=""
+                        width="32px"
+                      />
                     </td>
                     <td>
                       <input

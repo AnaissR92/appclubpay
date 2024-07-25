@@ -1,7 +1,7 @@
 {
-  "public/front-images/temp/crujiente-carne-frita-verduras.png": {
-    "file": "assets/crujiente-carne-frita-verduras.bd69bcf7.png",
-    "src": "public/front-images/temp/crujiente-carne-frita-verduras.png"
+  "public/front-images/temp/tortilla.jpg": {
+    "file": "assets/tortilla.76077a0c.jpg",
+    "src": "public/front-images/temp/tortilla.jpg"
   },
   "resources/js/app.js": {
     "file": "assets/app.a90aeddc.js",
@@ -9,27 +9,27 @@
     "isEntry": true
   },
   "resources/js/pos.js": {
-    "file": "assets/pos.a3e6bee9.js",
+    "file": "assets/pos.b340138a.js",
     "src": "resources/js/pos.js",
     "isEntry": true,
     "css": [
-      "assets/pos.518644e1.css"
+      "assets/pos.ce5a847a.css"
     ],
     "assets": [
-      "assets/crujiente-carne-frita-verduras.bd69bcf7.png"
+      "assets/tortilla.76077a0c.jpg"
     ]
-  },
-  "resources/js/pos.css": {
-    "file": "assets/pos.518644e1.css",
-    "src": "resources/js/pos.css"
   },
   "resources/css/app.css": {
     "file": "assets/app.274174bf.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
+  "resources/js/pos.css": {
+    "file": "assets/pos.ce5a847a.css",
+    "src": "resources/js/pos.css"
+  },
   "resources/sass/pos.scss": {
-    "file": "assets/pos.29e17365.css",
+    "file": "assets/pos.f4b8b454.css",
     "src": "resources/sass/pos.scss",
     "isEntry": true
   }
