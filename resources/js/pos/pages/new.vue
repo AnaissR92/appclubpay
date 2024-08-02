@@ -82,7 +82,7 @@
                   <tr>
                     <td class="py-1 px-1">
                       <img
-                        src="/public/front-images/temp/tortilla.jpg"
+                        src="https://appclubpay.com/public/front-images/temp/tortilla.jpg"
                         class=""
                         width="32px"
                       />

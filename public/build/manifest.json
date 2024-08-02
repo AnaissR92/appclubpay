@@ -1,32 +1,25 @@
 {
-  "public/front-images/temp/tortilla.jpg": {
-    "file": "assets/tortilla.76077a0c.jpg",
-    "src": "public/front-images/temp/tortilla.jpg"
-  },
   "resources/js/app.js": {
     "file": "assets/app.a90aeddc.js",
     "src": "resources/js/app.js",
     "isEntry": true
   },
   "resources/js/pos.js": {
-    "file": "assets/pos.b340138a.js",
+    "file": "assets/pos.086fe04d.js",
     "src": "resources/js/pos.js",
     "isEntry": true,
     "css": [
-      "assets/pos.ce5a847a.css"
-    ],
-    "assets": [
-      "assets/tortilla.76077a0c.jpg"
+      "assets/pos.fe43681e.css"
     ]
+  },
+  "resources/js/pos.css": {
+    "file": "assets/pos.fe43681e.css",
+    "src": "resources/js/pos.css"
   },
   "resources/css/app.css": {
     "file": "assets/app.274174bf.css",
     "src": "resources/css/app.css",
     "isEntry": true
-  },
-  "resources/js/pos.css": {
-    "file": "assets/pos.ce5a847a.css",
-    "src": "resources/js/pos.css"
   },
   "resources/sass/pos.scss": {
     "file": "assets/pos.f4b8b454.css",
