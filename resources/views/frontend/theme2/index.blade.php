@@ -1,6 +1,6 @@
 @extends('frontend.master')
 @section('content')
-    <section class="container">
+    <section class="container">                
         @php($append = request()->query->has('restaurant_view') ? ['restaurant_view' => request()->query->get('restaurant_view')] : [])
         @php($default_category_image = !empty($restaurant->vendor_setting->default_category_image) ? getFileUrl($restaurant->vendor_setting->default_category_image) : asset('assets/images/default_category.png'))
         <div class="pb-6 pt-6 md:pb-32 grid sm:grid-cols-2 md:grid-cols-3 gap-5 xl:gap-8" id="categories">

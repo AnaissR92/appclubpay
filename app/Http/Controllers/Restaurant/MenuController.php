@@ -7,13 +7,14 @@ use App\Models\Food;
 use App\Models\FoodCategory;
 use App\Models\Language;
 use App\Models\Restaurant;
+use App\Models\Table;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\DB;
 
 class MenuController extends Controller
 {
-    public function show(Restaurant $restaurant)
+    public function show(Restaurant $restaurant, $table = false)
     {
         $dataTheme = $restaurant->theme;
         if (request()->restaurant_view) {
@@ -66,7 +67,11 @@ class MenuController extends Controller
         $vendor_setting = isset($restaurant->settings) ? $restaurant->settings : null;
         $lang = App::currentLocale();
         $language = Language::where('store_location_name', $lang)->first();
-        return view("frontend.$theme.index", ['restaurant' => $restaurant, 'vendor_setting' => $vendor_setting, 'food_categories' => $food_categories, 'language' => $language, 'tables' => $restaurant->tables]);
+
+        //Mesa
+        $table = $table;
+
+        return view("frontend.$theme.index", ['restaurant' => $restaurant, 'vendor_setting' => $vendor_setting, 'food_categories' => $food_categories, 'language' => $language, 'tables' => $restaurant->tables, 'table' => $table]);
     }
 
     public function getFoodDetails(Food $food)
@@ -79,7 +84,7 @@ class MenuController extends Controller
         return view('frontend.food_modal', $compact)->render();
     }
 
-    public function categoryItems($restaurant_slug, FoodCategory $foodCategory)
+    public function categoryItems(Request $request, $restaurant_slug, FoodCategory $foodCategory)
     {
         $restaurant = Restaurant::where('slug', $restaurant_slug)->with('tables')->first();
         if (empty($restaurant)) {

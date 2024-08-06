@@ -23,7 +23,7 @@
 
     <li>
         <a href="{{ route('home') }}" class="{{ Request::is('home') ? 'active' : '' }}">
-            <i class="fas fa-home"></i>
+            <ion-icon name="home-outline"></ion-icon>
             <span data-key="t-dashboard">{{ __('system.dashboard.menu') }}</span>
         </a>
     </li>
@@ -81,7 +81,7 @@
         </a>
     </li>
     <li>
-        <a href="{{ route('delivery.index') }}">
+        <a href="{{ route('frontend.delivery') }}">
             <i class="fas fa-cart-plus font-size-18"></i>
             <span data-key="t-{{ __('system.fields.delivery') }}">{{ __('system.fields.delivery') }}</span>
         </a>

@@ -27,6 +27,8 @@
     @endif
     <link rel="stylesheet" href="{{ asset('assets/cdns/intlTelInput.css') }}" />
 
+    @vite('resources/sass/app.scss')
+
     <script src="https://js.pusher.com/7.2/pusher.min.js"></script>
     @stack('third_party_stylesheets')
     <style>
@@ -224,6 +226,10 @@
 
                     </div>
                 </div>
+
+                {{-- icons --}}
+                <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+                <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         </header>
 
 

@@ -4,11 +4,6 @@
             <thead>
                 <tr role="row">
                     <th scope="col">
-                        <div class="d-flex justify-content-between w-50px">
-                            @sortablelink('id', __('system.crud.id'), [], ['class' => 'w-100 text-gray'])
-                        </div>
-                    </th>
-                    <th scope="col">
                         <div class="d-flex justify-content-between">
                             @sortablelink('name', __('system.tables.name'), [], ['class' => 'w-100 text-gray'])
                         </div>
@@ -17,23 +12,33 @@
                         <div class="d-flex justify-content-between">
                             @sortablelink('no_of_capacity', __('system.tables.no_of_capacity'), [], ['class' => 'w-100 text-gray'])
                         </div>
-                    </th>
+                    </th>                    
                     <th scope="col">
                         <div class="d-flex justify-content-between ">
                             @sortablelink('position', __('system.tables.position'), [], ['class' => 'w-100 text-gray'])
                         </div>
                     </th>
-
+                    <th>
+                        QR
+                    </th>
                     <th class="h-mw-80px">{{ __('system.crud.action') }}</th>
                 </tr>
             </thead>
             <tbody>
                 @forelse ($tables as $table)
                     <tr>
-                        <th scope="row" class="sorting_1">{{ $table->id }}</th>
-                        <td>{{ $table->local_name }}</td>
+                        <th scope="row" class="sorting_1">
+                            <a href="{{ route('frontend.restaurant', ['restaurant' => $table->restaurant->slug]) }}?table={{ $table->id }}" target="_blank">
+                                <span>{{ $table->name }}</span> <i class=" fas fa-external-link-alt ms-2 " aria-hidden="true"></i>
+                            </a>
+                        </th>
                         <td>{{ $table->no_of_capacity }}</td>
                         <td>{{ $table->position }}</td>
+                        <td>
+                            <a href="{{ route('frontend.restaurant', ['restaurant' => $table->restaurant->slug]) }}?table={{ $table->id }}" target="_BLANK">
+                                <img width="64px" src="{{ $table->qrUrl() }}" alt="qr" />
+                            </a>
+                        </td>
                         <td>
                             @can('delete tables')
                                 {{ Form::open(['route' => ['restaurant.tables.destroy', ['table' => $table->id]], 'autocomplete' => 'off', 'class' => 'data-confirm', 'data-confirm-message' => __('system.tables.are_you_sure', ['name' => $table->title]), 'data-confirm-title' => __('system.crud.delete'), 'id' => 'delete-form_' . $table->id, 'method' => 'delete']) }}

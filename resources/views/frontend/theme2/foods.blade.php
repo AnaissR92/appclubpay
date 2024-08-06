@@ -1,6 +1,6 @@
 @extends('frontend.master')
 @section('content')
-    <section class="container">
+    <section class="container"> 
         <div class="lg:flex items-center justify-between pb-8 text-center lg:text-left pt-14">
             <h3 class="text-2xl font-bold mb-5 lg:mb-0 dark:text-white">{{ $food_category->local_lang_name }}</h3>
             <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-end gap-5">

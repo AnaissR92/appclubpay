@@ -52,4 +52,15 @@ class Table extends Model
     {
         return $this->hasOne(Waiter::class, 'table_id', 'id');
     }
+
+    public function name()
+    {
+        return $this->name;
+    }
+
+    public function qrUrl()
+    {
+        $file_name = $this->restaurant->id . '-table-' . $this->id . '.svg';
+        return asset('qrcodes/' . $file_name);
+    }
 }

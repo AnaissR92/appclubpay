@@ -10,15 +10,16 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use App\Repositories\Restaurant\TableRepository;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class TableController extends Controller
 {
 
     public function __construct()
     {
-        $this->middleware('permission:show tables')->only('index','show');
-        $this->middleware('permission:add tables')->only('create','store');
-        $this->middleware('permission:edit tables')->only('edit','update');
+        $this->middleware('permission:show tables')->only('index', 'show');
+        $this->middleware('permission:add tables')->only('create', 'store');
+        $this->middleware('permission:edit tables')->only('edit', 'update');
         $this->middleware('permission:delete tables')->only('destroy');
     }
 
@@ -56,15 +57,28 @@ class TableController extends Controller
             $data['user_id'] = $vendor_id;
             $data['restaurant_id'] = $user->restaurant_id;
 
-            Table::create($data);
+            $table = Table::create($data);
 
             DB::commit();
+
             $request->session()->flash('Success', __('system.messages.saved', ['model' => __('system.tables.menu')]));
         } catch (\Illuminate\Database\QueryException $ex) {
             DB::rollback();
             $request->session()->flash('Error', __('system.messages.operation_rejected'));
             return redirect()->back();
         }
+
+        //QR
+        $restaurant = $table->restaurant;
+
+        $file_name = $restaurant->id . '-table-' . $table->id . '.svg';
+        $qr_path = public_path('qrcodes/' . $file_name);
+        //$download_path = asset('qrcodes/' . $file_name);
+
+        $url = route('frontend.restaurant', $restaurant->slug);
+        $url .= '?table=' . $table->id;
+
+        QrCode::size(450)->generate($url, $qr_path);
 
         return redirect()->route('restaurant.tables.index');
     }
@@ -109,9 +123,9 @@ class TableController extends Controller
         return redirect()->route('restaurant.tables.index');
     }
 
-    public function destroy(Request $request,Table $table)
+    public function destroy(Request $request, Table $table)
     {
-        Waiter::where('table_id',$table->id)->delete();
+        Waiter::where('table_id', $table->id)->delete();
         $table->delete();
 
         $request->session()->flash('Success', __('system.messages.deleted', ['model' => __('system.tables.menu')]));
