@@ -47,7 +47,7 @@ Route::middleware(['preventBackHistory'])->group(function () {
     Route::get('/pos/new', [\App\Http\Controllers\POSController::class, 'new'])->name('frontned.pos.new');
 
     // DELIVERY
-    Route::get('/delivery', [\App\Http\Controllers\DeliveryController::class, 'index'])->name('delivery.index');
+    Route::get('/delivery', [\App\Http\Controllers\DeliveryController::class, 'index'])->name('frontend.delivery');
 
     //store feedback
     Route::post('/feedback', [App\Http\Controllers\Restaurant\FeedbackController::class, 'store'])->name('feedbacks.store');

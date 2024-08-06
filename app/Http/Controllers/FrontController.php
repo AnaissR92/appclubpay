@@ -57,7 +57,7 @@ class FrontController extends Controller
         return redirect('/contact-us')->with('Success', trans('system.contact_us.success'));
     }
 
-    public function restaurant($restaurant_slug)
+    public function restaurant(Request $request, $restaurant_slug)
     {
         $hide_restaurant_after_days = config('app.hide_restaurant_after_days');
 
@@ -69,8 +69,8 @@ class FrontController extends Controller
 
         $current_plans = ($restaurant->created_user->active_plan);
 
-        if (isset($current_plans) && $current_plans!=null) {
-            if (isset($current_plans->expiry_date) && $current_plans->expiry_date!=null) {
+        if (isset($current_plans) && $current_plans != null) {
+            if (isset($current_plans->expiry_date) && $current_plans->expiry_date != null) {
                 $current_date = Carbon::now()->format('Y-m-d H:i:s');
 
                 $expire_date = $current_plans->expiry_date;
@@ -87,7 +87,14 @@ class FrontController extends Controller
             }
         }
 
-        return (new \App\Http\Controllers\Restaurant\MenuController)->show($restaurant);
+        $table_id = $request->query('table');
+        if ($table_id) {
+            $table = Table::find($table_id);
+        } else {
+            $table = false;
+        }
+
+        return (new \App\Http\Controllers\Restaurant\MenuController)->show($restaurant, $table);
     }
 
     public function tableAssign(Request $request)

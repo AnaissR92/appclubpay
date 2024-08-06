@@ -28,6 +28,9 @@
     <link href="{{ asset('assets/libs/alertifyjs/build/css/alertify.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets/libs/alertifyjs/build/css/themes/default.min.css') }}" rel="stylesheet"
         type="text/css" />
+
+    @vite('resources/sass/frontend.scss')
+
     @stack('page_css')
 </head>
 @php($theme = Cookie::get('front_theme', ''))
@@ -257,6 +260,9 @@
                             <div class="pb-5 border-b border-neutral/30 dark:border-white/30">
                                 <p class="text-lg md:text-2xl font-semibold capitalize mb-4">
                                     {{ $restaurant->name . ' - ' . $restaurant->restaurant_type->local_name }}
+                                    @if($table)
+                                        <span class="resto-table-name">| {{ $table->name() }}</span>
+                                        @endif
                                 </p>
                                 <ul class="flex flex-col md:flex-row gap-3">
                                     @if ($restaurant->full_address)
