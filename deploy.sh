@@ -4,7 +4,7 @@
 echo "Subiendo Public:"
 rsync -raP public/* u116825838@access1010342609.webspace-data.io:/kunden/homepages/12/d1010342609/htdocs/public/
 
-echo "Subiendo los Resources/Views":
+echo "Subiendo los Resources":
 rsync -raP resources/* u116825838@access1010342609.webspace-data.io:/kunden/homepages/12/d1010342609/htdocs/resources/
 
 echo "Subiendo los Controllers":

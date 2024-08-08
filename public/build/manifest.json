@@ -12,14 +12,24 @@
       "assets/pos.fe43681e.css"
     ]
   },
-  "resources/js/pos.css": {
-    "file": "assets/pos.fe43681e.css",
-    "src": "resources/js/pos.css"
-  },
   "resources/css/app.css": {
     "file": "assets/app.274174bf.css",
     "src": "resources/css/app.css",
     "isEntry": true
+  },
+  "resources/sass/frontend.scss": {
+    "file": "assets/frontend.d073f5bb.css",
+    "src": "resources/sass/frontend.scss",
+    "isEntry": true
+  },
+  "resources/sass/app.scss": {
+    "file": "assets/app.cf6bab66.css",
+    "src": "resources/sass/app.scss",
+    "isEntry": true
+  },
+  "resources/js/pos.css": {
+    "file": "assets/pos.fe43681e.css",
+    "src": "resources/js/pos.css"
   },
   "resources/sass/pos.scss": {
     "file": "assets/pos.f4b8b454.css",
