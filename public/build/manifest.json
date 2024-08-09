@@ -16,14 +16,14 @@
     ]
   },
   "resources/js/front.js": {
-    "file": "assets/front.991f9b05.js",
+    "file": "assets/front.228d4676.js",
     "src": "resources/js/front.js",
     "isEntry": true,
     "imports": [
       "_card.d3b2c0ea.js"
     ],
     "css": [
-      "assets/front.e35eb703.css"
+      "assets/front.a66ced6e.css"
     ]
   },
   "_card.d3b2c0ea.js": {
@@ -33,34 +33,34 @@
     ]
   },
   "resources/js/front.css": {
-    "file": "assets/front.e35eb703.css",
+    "file": "assets/front.a66ced6e.css",
     "src": "resources/js/front.css"
-  },
-  "card.css": {
-    "file": "assets/card.951445ff.css",
-    "src": "card.css"
   },
   "resources/sass/app.scss": {
     "file": "assets/app.cf6bab66.css",
     "src": "resources/sass/app.scss",
     "isEntry": true
   },
+  "card.css": {
+    "file": "assets/card.951445ff.css",
+    "src": "card.css"
+  },
   "resources/js/pos.css": {
     "file": "assets/pos.d6f478bd.css",
     "src": "resources/js/pos.css"
   },
-  "resources/css/app.css": {
-    "file": "assets/app.7eb49079.css",
-    "src": "resources/css/app.css",
-    "isEntry": true
-  },
   "resources/sass/frontend.scss": {
-    "file": "assets/frontend.8086cbf2.css",
+    "file": "assets/frontend.d24b9a6c.css",
     "src": "resources/sass/frontend.scss",
     "isEntry": true
   },
+  "resources/css/app.css": {
+    "file": "assets/app.620c12c4.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
   "resources/sass/pos.scss": {
-    "file": "assets/pos.61f70003.css",
+    "file": "assets/pos.ac4b5a50.css",
     "src": "resources/sass/pos.scss",
     "isEntry": true
   }
