@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link href="{{ asset('assets/cdns/css2.css') }}" rel="stylesheet" />
     <!-- Style CSS -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css']);
     <style>
         body .dark-bg {
             background: url('{{ asset('assets/theme/images/dark-bg.png') }}') fixed;
@@ -29,6 +29,10 @@
     <link href="{{ asset('assets/libs/alertifyjs/build/css/themes/default.min.css') }}" rel="stylesheet"
         type="text/css" />
 
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    @vite('resources/js/front.js')
     @vite('resources/sass/frontend.scss')
 
     @stack('page_css')
@@ -234,7 +238,6 @@
                 </div>
             </header>
 
-
             @if (
                 (isset($vendor_setting->allow_show_banner) && $vendor_setting->allow_show_banner == true) ||
                     (isset($vendor_setting->allow_show_restaurant_name_address) &&
@@ -260,9 +263,11 @@
                             <div class="pb-5 border-b border-neutral/30 dark:border-white/30">
                                 <p class="text-lg md:text-2xl font-semibold capitalize mb-4">
                                     {{ $restaurant->name . ' - ' . $restaurant->restaurant_type->local_name }}
-                                    @if($table)
-                                        <span class="resto-table-name">| {{ $table->name() }}</span>
+                                    @isset($table)
+                                        @if($table)
+                                            <span class="resto-table-name">| {{ $table->name() }}</span>
                                         @endif
+                                    @endisset
                                 </p>
                                 <ul class="flex flex-col md:flex-row gap-3">
                                     @if ($restaurant->full_address)
@@ -307,15 +312,23 @@
                 <section class="relative h-[120px] md:h-[120px]"></section>
             @endif
 
+            <div class="container py-6">
+                <div id="front">
+                    <new-order></new-order>
+                </div>
+            </div>
 
+
+
+            <!--
             <div style="min-height:calc(100vh - 144px)">
                 @yield('content')
                 @once
                     <div class="modal-details"></div>
                     @include('frontend.call_the_waiter')
-
                 @endonce
             </div>
+        -->
 
 
 

@@ -5,6 +5,7 @@ module.exports = {
     "./resources/views/frontend/**/*.blade.php",
     "./resources/views/frontend/**/*.js",
     "./resources/views/frontend/**/*.vue",
+    "./resources/js/**/*.vue",
   ],
   darkMode: 'class',
   theme: {

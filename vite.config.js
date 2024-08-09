@@ -6,7 +6,15 @@ export default defineConfig({
     plugins: [
         vue(),
         laravel({
-            input: ['resources/css/app.css', 'resources/sass/app.scss', 'resources/sass/frontend.scss', 'resources/js/app.js', 'resources/sass/pos.scss', 'resources/js/pos.js'],
+            input: [
+                'resources/css/app.css',
+                'resources/sass/app.scss',
+                'resources/sass/frontend.scss',
+                'resources/js/app.js',
+                'resources/sass/pos.scss',
+                'resources/js/pos.js',
+                'resources/js/front.js'
+            ],
             refresh: true,
         }),
     ],

@@ -5,7 +5,7 @@
         <h1 class="text-2xl text-primary">POS Pedidos</h1>
         <a href="/pos/new">
           <button>
-            <i class="fas fa-plus"></i>
+            <ion-icon name="add-circle-outline" class="mr-2"></ion-icon>
             Nuevo pedido
           </button>
         </a>
@@ -53,7 +53,7 @@
                 <span class="tag">{{ o.status }}</span>
               </td>
               <td>
-                <i class="fas fa-eye text-primary"></i>
+                <ion-icon name="create-outline"></ion-icon>
               </td>
             </tr>
           </tbody>

@@ -1,7 +1,7 @@
 import { createApp } from 'vue/dist/vue.esm-bundler.js';
-import Home from './pos/pages/index.vue';
-import NewPage from './pos/pages/new.vue';
-import Card from './pos/components/card.vue';
+import Home from './pages/pos/index.vue';
+import NewPage from './pages/pos/new.vue';
+import Card from './components/pos/card.vue';
 
 import VueDatePicker from '@vuepic/vue-datepicker';
 import '@vuepic/vue-datepicker/dist/main.css'
