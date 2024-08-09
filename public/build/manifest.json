@@ -5,22 +5,40 @@
     "isEntry": true
   },
   "resources/js/pos.js": {
-    "file": "assets/pos.086fe04d.js",
+    "file": "assets/pos.b1d6b3b7.js",
     "src": "resources/js/pos.js",
     "isEntry": true,
+    "imports": [
+      "_card.d3b2c0ea.js"
+    ],
     "css": [
-      "assets/pos.fe43681e.css"
+      "assets/pos.d6f478bd.css"
     ]
   },
-  "resources/css/app.css": {
-    "file": "assets/app.274174bf.css",
-    "src": "resources/css/app.css",
-    "isEntry": true
+  "resources/js/front.js": {
+    "file": "assets/front.991f9b05.js",
+    "src": "resources/js/front.js",
+    "isEntry": true,
+    "imports": [
+      "_card.d3b2c0ea.js"
+    ],
+    "css": [
+      "assets/front.e35eb703.css"
+    ]
   },
-  "resources/sass/frontend.scss": {
-    "file": "assets/frontend.d073f5bb.css",
-    "src": "resources/sass/frontend.scss",
-    "isEntry": true
+  "_card.d3b2c0ea.js": {
+    "file": "assets/card.d3b2c0ea.js",
+    "css": [
+      "assets/card.951445ff.css"
+    ]
+  },
+  "resources/js/front.css": {
+    "file": "assets/front.e35eb703.css",
+    "src": "resources/js/front.css"
+  },
+  "card.css": {
+    "file": "assets/card.951445ff.css",
+    "src": "card.css"
   },
   "resources/sass/app.scss": {
     "file": "assets/app.cf6bab66.css",
@@ -28,11 +46,21 @@
     "isEntry": true
   },
   "resources/js/pos.css": {
-    "file": "assets/pos.fe43681e.css",
+    "file": "assets/pos.d6f478bd.css",
     "src": "resources/js/pos.css"
   },
+  "resources/css/app.css": {
+    "file": "assets/app.7eb49079.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/sass/frontend.scss": {
+    "file": "assets/frontend.8086cbf2.css",
+    "src": "resources/sass/frontend.scss",
+    "isEntry": true
+  },
   "resources/sass/pos.scss": {
-    "file": "assets/pos.f4b8b454.css",
+    "file": "assets/pos.61f70003.css",
     "src": "resources/sass/pos.scss",
     "isEntry": true
   }
