@@ -47,6 +47,7 @@ class HomeController extends Controller
 
 
         if (!$user->hasRole('Super-Admin')) {
+            $count['subscriptions']=array(); //array
 
             $restaurant_id = isset($restaurant->id) ? $restaurant->id : 0;
 
