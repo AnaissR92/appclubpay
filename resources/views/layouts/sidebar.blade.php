@@ -74,12 +74,7 @@
     </li>
     @endcan
 
-    <li>
-        <a href="{{ route('frontend.pos') }}">
-            <i class="fas fa-tablet-alt font-size-18"></i>
-            <span data-key="t-{{ __('system.fields.pos') }}">{{ __('system.fields.pos') }}</span>
-        </a>
-    </li>
+    
     <li>
         <a href="{{ route('frontend.delivery') }}">
             <i class="fas fa-cart-plus font-size-18"></i>
@@ -203,13 +198,7 @@
             <i class="fas fa-pager font-size-18"></i>
             <span data-key="t-{{ __('system.cms.menu') }}">{{ __('system.cms.menu') }}</span>
         </a>
-    </li>
-    <li>
-        <a href="{{ route('frontend.pos') }}">
-            <i class="fas fa-clipboard font-size-18"></i>
-            <span data-key="t-{{ __('system.cms.pos') }}">POS</span>
-        </a>
-    </li>
+    </li>   
     <li>
         <a href="{{ route('frontend.delivery') }}">
             <i class="fas fa-motorcycle font-size-18"></i>
