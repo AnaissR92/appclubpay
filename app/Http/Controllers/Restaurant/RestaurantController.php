@@ -94,8 +94,8 @@ class RestaurantController extends Controller
             return redirect()->route('restaurant.vendor.plan')->with(['Error' => __('system.plans.restaurant_extends')]);
         }
 
-        if ($user->user_type == User::USER_TYPE_ADMIN) {
-            $vendors = User::where('user_type', User::USER_TYPE_VENDOR)->where('status', 1)->orderBy('first_name', 'asc')->get();
+        if ($user->user_type == User::USER_TYPE_ADMIN) {           
+            $vendors = User::where('user_type', User::USER_TYPE_ADMIN)->where('status', 1)->orderBy('first_name', 'asc')->first();
         } else {
             $vendor_id = ($user->user_type == User::USER_TYPE_STAFF) ? $user->created_by : $user->id;
             $vendors = User::find($vendor_id);
