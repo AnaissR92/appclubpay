@@ -8,6 +8,13 @@
     Deny from all
     </Files>
 
+    <FilesMatch "\.(ttf|otf|eot|woff|woff2)$">
+        <IfModule mod_headers.c>
+            Header set Access-Control-Allow-Origin "*"
+        </IfModule>
+    </FilesMatch>
+
+
    
     RewriteEngine on
 	RewriteBase /
